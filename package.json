@@ -1,0 +1,33 @@
+{
+  "name": "perspectives",
+  "version": "0.1.0",
+  "description": "Easily add perspective on mousemove and deviceorientation",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Hehe...\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shwilliam/perspectives.git"
+  },
+  "keywords": [
+    "perspective",
+    "mousemove",
+    "deviceorientation",
+    "js"
+  ],
+  "author": "William L <w-lindvall@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shwilliam/perspectives/issues"
+  },
+  "homepage": "https://github.com/shwilliam/perspectives#readme",
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}

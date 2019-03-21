@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Perspectives demo</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #with-perspective > .img {
+      width: 400px;
+      height: 200px;
+      background-image: url('https://octodex.github.com/images/collabocats.jpg');
+      background-color: #cccccc;
+      transform-origin: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <main role="main">
+    <div class="container">
+
+      <div id="with-perspective">
+        <div class="img"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- PERSPECTIVES -->
+  <script src="./src/index.js"></script>
+  <link rel="stylesheet" href="./src/styles.css">
+</body>
+</html>
