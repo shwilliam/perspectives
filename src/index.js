@@ -2,7 +2,7 @@ const init = () => {
   // create stylesheet
   const style = document.createElement('style')
   style.innerHTML = `
-      #with-perspective {
+      .with-perspective {
         -webkit-perspective: 1000px;
         perspective: 1000px;
       }
@@ -39,8 +39,8 @@ const init = () => {
   const handleOrientationChange = ({ absolute, alpha, beta, gamma }) => {
     // TODO: apply perspective effect on all els with .with-perspective
 
-    // first child of #with-perspective
-    const el = document.getElementById('with-perspective').children[0]
+    // arr of first children of els with .with-perspective
+    const els = Array.from(document.getElementsByClassName('with-perspective')).map(el => el.children[0])
 
     // get device orientation
     const angleX = beta - 70
@@ -52,26 +52,28 @@ const init = () => {
       return
     }
 
-    applyPerspectiveRotation(el, angleX, angleY)
+    els.forEach(el => applyPerspectiveRotation(el, angleX, angleY))
   }
 
   const handleMouseMove = (e) => {
     // mouse pos
     const { pageX, pageY } = e
 
-    // first child of #with-perspective
-    const el = document.getElementById('with-perspective').children[0]
-    const elPos = el.getBoundingClientRect()
-
-    // center of img
-    const elX = elPos.left + (el.offsetWidth / 2)
-    const elY = elPos.top + (el.offsetHeight / 2)
-
-    // offset from mouse pos
-    const angleX = (elY - pageY) / 25
-    const angleY = (elX - pageX) / -25
-
-    applyPerspectiveRotation(el, angleX, angleY)
+    // arr of first children of els with .with-perspective
+    const els = Array.from(document.getElementsByClassName('with-perspective')).map(el => el.children[0])
+    els.forEach(el => {
+      const elPos = el.getBoundingClientRect()
+  
+      // center of img
+      const elX = elPos.left + (el.offsetWidth / 2)
+      const elY = elPos.top + (el.offsetHeight / 2)
+  
+      // offset from mouse pos
+      const angleX = (elY - pageY) / 25
+      const angleY = (elX - pageX) / -25
+  
+      applyPerspectiveRotation(el, angleX, angleY)
+    })
   }
 
   if (isMobile()) {
