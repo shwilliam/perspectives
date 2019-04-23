@@ -11,13 +11,13 @@
 
 ## Getting started
 
-Simply include `<script src="https://unpkg.com/perspectives"></script>` into your HTML file and add the id 'with-perspective' to target element's parent.
+Simply include `<script src="https://unpkg.com/perspectives"></script>` into your HTML file and add the class 'with-perspective' to target elements' parent.
 
 ```html
 <html>
   <body>
 
-    <div id="with-perspective">
+    <div class="with-perspective">
       <h1>I am a 3D title</h1>
     </div>
 
