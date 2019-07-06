@@ -5,18 +5,14 @@
   "main": "dist/perspectives.js",
   "scripts": {
     "build": "babel src/index.js --out-file dist/perspectives.js",
+    "prepublish": "npm run build",
     "test": "echo \"Hehe...\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shwilliam/perspectives.git"
   },
-  "keywords": [
-    "perspective",
-    "mousemove",
-    "deviceorientation",
-    "js"
-  ],
+  "keywords": ["perspective", "mousemove", "deviceorientation", "js"],
   "author": "William L <w-lindvall@outlook.com>",
   "license": "MIT",
   "bugs": {
