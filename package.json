@@ -1,6 +1,6 @@
 {
   "name": "perspectives",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Easily add perspective on mousemove and deviceorientation",
   "main": "dist/perspectives.js",
   "scripts": {
